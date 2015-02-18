@@ -90,7 +90,17 @@ void do_remove_entry(Phone_Directory& the_directory) // Exercise 1.8: please com
 	string name;
 	cout << "Enter name: ";
 	getline(cin, name);
-	// Complete the rest of this function 
+	// Complete the rest of this function
+    
+    int nameLocation = Phone_Directory :: find(& name);
+    
+    if(nameLocation == -1){
+        cout << "Entry does not exist.";
+        return;
+    }
+    
+    phone_Directory :: remove_entry(& name);
+    return;
 	
 }
 
